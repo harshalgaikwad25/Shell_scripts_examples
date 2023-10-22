@@ -1,0 +1,18 @@
+AWK is a parser and a powerful report building tool. 
+
+awk '{ print }' /etc/passwd
+awk ‘/director/ {print}’ emp.lst 
+awk '{ print $0 }' /etc/passwd 
+awk '{ print "" }' /etc/passwd 
+awk '{ print "hiya" }' /etc/passwd 
+awk -F":" '{ print $1 }' /etc/passwd 
+awk -F":" '{ print $1 $3 }' /etc/passwd 
+awk -F":" '{ print $1 " " $3 }' /etc/passwd 
+awk -F":" '{ print "username: " $1 "\t\tuid:" $3" }' /etc/passwd 
+awk –F”|” ‘/director/ { kount = kount + 1
+> printf “%3d %-20s”, kount, $2}
+
+BEGIN { 
+ FS=":" 
+} 
+{ print $1 }
